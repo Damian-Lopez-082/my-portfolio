@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>桜井 智宏 | 放送作家・脚本家 – ファンダムを形成する物語設計</title>
+    <meta name="description" content="AD→芸人→放送作家。異色の経歴で「心を動かす物語」と「数字に繋がる企画」を両立。熱狂的なファンダムを形成します。『あざとくて何が悪いの!?』あざとドラマ脚本、『RIZIN』PPV構成ほか。" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- OGP / Twitter Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="桜井 智宏 | 放送作家・脚本家 – ファンダムを形成する物語設計" />
+    <meta property="og:description" content="AD→芸人→放送作家。異色の経歴を武器に、視聴者の心を動かし、数字を獲る企画を設計します。『あざとドラマ』脚本、『RIZIN』構成ほか。" />
+    <meta property="og:image" content="https://images.weserv.nl/?url=prcdn.freetls.fastly.net/release_image/165653/13/165653-13-a527854926e90b827b42fc74cb08728b-1706x960.jpg&w=1200&h=630&fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230ea5e9'/%3E%3Ctext x='50' y='60' font-size='55' text-anchor='middle' fill='%23fff' font-family='Inter, sans-serif' font-weight='800'%3ETS%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        .timeline-item::before { content: ''; position: absolute; left: -2px; top: 1rem; width: 0.25rem; height: 0.25rem; border-radius: 9999px; background-color: #0ea5e9; }
+        .timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 0; top: 1.5rem; width: 1px; height: 100%; background-color: #374151; }
+        .modal-overlay { transition: opacity 0.25s ease; }
+        .modal-content { transition: transform 0.25s ease; }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "桜井 智宏",
+      "jobTitle": "放送作家・脚本家",
+      "url": "https://example.com/",
+      "sameAs": ["https://x.com/sakurai_japan", "https://www.instagram.com/kono_insta_bokuno"],
+      "knowsAbout": ["放送作家", "脚本", "構成", "企画", "演出", "バラエティ", "ドラマ"],
+      "alumniOf": {"@type": "Organization", "name": "NSC東京校"}
+    }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-300">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur bg-gray-950/80 border-b border-white/5">
+        <nav class="container mx-auto px-5 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 text-white font-extrabold tracking-tight text-lg">
+                <span class="inline-flex size-9 items-center justify-center rounded-lg bg-sky-500 text-white font-black text-base">TS</span>
+                <span class="hidden sm:inline">Tomohiro Sakurai</span>
+            </a>
+            <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+                <li><a href="#story" class="hover:text-white">STORY</a></li>
+                <li><a href="#works" class="hover:text-white">WORKS</a></li>
+                <li><a href="#gallery" class="hover:text-white">GALLERY</a></li>
+                <li><a href="#philosophy" class="hover:text-white">PHILOSOPHY</a></li>
+                <li><a href="#credits" class="hover:text-white">CREDITS</a></li>
+            </ul>
+             <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500 text-gray-950 font-semibold hover:bg-sky-400 transition text-sm">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>相談する
+                </a>
+                <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/5"><i data-lucide="menu" class="w-6 h-6"></i></button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-white/5">
+            <ul class="px-5 py-3 space-y-2">
+                <li><a href="#story" class="block py-2">STORY</a></li>
+                <li><a href="#works" class="block py-2">WORKS</a></li>
+                <li><a href="#gallery" class="block py-2">GALLERY</a></li>
+                <li><a href="#philosophy" class="block py-2">PHILOSOPHY</a></li>
+                <li><a href="#credits" class="block py-2">CREDITS</a></li>
+                <li><a href="#contact" class="block py-2">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-24 md:py-32 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-950 to-gray-950"></div>
+            <div class="absolute -top-1/4 right-0 blur-3xl w-1/2 h-full bg-sky-600/10 rounded-full"></div>
+            <div class="container mx-auto px-5 relative z-10">
+                <div class="max-w-3xl text-center mx-auto">
+                    <p class="reveal text-sm font-semibold tracking-widest text-sky-400">AD → 芸人 → 放送作家</p>
+                    <h1 class="reveal mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-white">
+                        企画と物語で、<span class="text-sky-400">数字を獲る。</span>
+                    </h1>
+                    <p class="reveal mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+                        異色の経歴だからこそ描ける「視聴者が動く」ストーリー。<br class="hidden md:block" />
+                        熱狂的な<span class="text-white font-semibold">ファンダム</span>を形成し、記憶と記録に残るコンテンツを設計します。
+                    </p>
+                    <div class="reveal mt-8 flex flex-wrap justify-center gap-4">
+                        <a href="#works" class="px-6 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-sky-100 transition">代表作を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story (Timeline) Section -->
+        <section id="story" class="py-24 border-y border-white/5">
+            <div class="container mx-auto px-5 grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">My Story</h2>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        テレビの裏方も、舞台の演者も、両方経験したからこそわかる「熱量の届け方」があります。
+                        この異色のキャリアパスこそが、僕の企画の根幹です。
+                    </p>
+                </div>
+                <div class="reveal relative border-l border-gray-700 pl-8 space-y-12">
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-sky-400 text-lg">テレビ制作の道へ (2009-)</h3>
+                        <p class="mt-1 text-sm text-gray-400">株式会社ザ・ワークス入社。『あいのり』『ショーバト』など、人気番組のADとして現場のイロハを学ぶ。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-sky-400 text-lg">お笑いの世界へ (2011-)</h3>
+                        <p class="mt-1 text-sm text-gray-400">NSC東京校17期生として入学。芸人として舞台に立ち、人を笑わせるための構成力と度胸を培う。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-sky-400 text-lg">放送作家へ転身 (2014-)</h3>
+                        <p class="mt-1 text-sm text-gray-400">現場経験と演者経験を武器に、放送作家の道へ。テレビ、配信、イベントと活動の幅を広げ、現在に至る。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Works Section -->
+        <section id="works" class="py-24 bg-gray-900 border-b border-white/5">
+            <div class="container mx-auto px-5">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Featured Works</h2>
+                    <p class="mt-4 text-gray-400">なぜ、それが結果に繋がったのか。設計の意図と成果をセットでご覧ください。</p>
+                </div>
+                <div class="mt-16 space-y-20">
+                    <!-- Work 1: Azato Drama -->
+                    <article class="reveal grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                        <a href="https://tver.jp/series/srkjxmps8y" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden shadow-2xl"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="あざとドラマ" src="https://statics.tver.jp/images/content/thumbnail/series/large/srkjxmps8y.jpg?v=6"/></a>
+                        <div>
+                            <p class="text-sm font-semibold text-sky-400">Case 01: テレビ朝日</p>
+                            <h3 class="mt-1 text-2xl md:text-3xl font-extrabold text-white">『あざとくて何が悪いの!?』<br/>あざとドラマ 第10弾 脚本</h3>
+                            <p class="mt-3 text-gray-400">番組リニューアルの起爆剤として、見逃し配信数の最大化がミッション。SNSでの共感とツッコミを誘発する「令和の等身大」なストーリーを設計。</p>
+                            <div class="mt-4 p-4 rounded-lg bg-gray-800 border border-white/5">
+                                <p class="text-sm font-bold text-white">結果</p>
+                                <p class="mt-1 text-2xl font-extrabold text-sky-400">見逃し配信 350万回<span class="text-base font-bold text-white">超</span></p>
+                                <p class="text-xs text-gray-500">番組リニューアル後、最高記録を達成</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Work 2: RIZIN -->
+                    <article class="reveal grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                        <div class="md:order-2">
+                          <a href="https://abema.tv/video/title/90-2000" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden shadow-2xl"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="RIZIN" src="https://d1uzk9o9cg136f.cloudfront.net/f/16782696/rc/2024/07/19/02fdd7fd5829658ed8379682856f586ad9d76ade_xlarge.jpg"/></a>
+                        </div>
+                        <div class="md:order-1">
+                            <p class="text-sm font-semibold text-sky-400">Case 02: ABEMA</p>
+                            <h3 class="mt-1 text-2xl md:text-3xl font-extrabold text-white">RIZIN PPV販促生配信 構成</h3>
+                            <p class="mt-3 text-gray-400">PPV売上最大化のため、試合紹介だけでなく「選手の物語」に焦点を当てた構成を提案。視聴者が感情移入し「応援したい」と思える“推す理由”を設計。</p>
+                            <div class="mt-4 p-4 rounded-lg bg-gray-800 border border-white/5">
+                                <p class="text-sm font-bold text-white">結果</p>
+                                <p class="mt-1 text-2xl font-extrabold text-sky-400">当時の過去最高PPV売上<span class="text-base font-bold text-white">を更新</span></p>
+                                <p class="text-xs text-gray-500">熱狂が数字に直結</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Work 3: SideM -->
+                    <article class="reveal grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                        <a href="https://imas-sidem.com/" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden shadow-2xl"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="SideM" src="https://imas-sidem.com/assets/img/top/img_main-chara.png"/></a>
+                        <div>
+                            <p class="text-sm font-semibold text-sky-400">Case 03: Web配信</p>
+                            <h3 class="mt-1 text-2xl md:text-3xl font-extrabold text-white">THE IDOLM@STER SideM 公式配信 構成</h3>
+                            <p class="mt-3 text-gray-400">長寿シリーズのマンネリ化を防ぎ、ファンのエンゲージメントを高めるため、SNSでの二次創作や議論を誘発する「余白」のあるコーナーを企画。</p>
+                            <div class="mt-4 p-4 rounded-lg bg-gray-800 border border-white/5">
+                                <p class="text-sm font-bold text-white">結果</p>
+                                <p class="mt-1 text-2xl font-extrabold text-sky-400">関連ワードがXで<span class="text-base font-bold text-white">トレンド入り</span></p>
+                                <p class="text-xs text-gray-500">ファンダムの活性化に貢献</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Work 4: Aijo Narration -->
+                    <article class="reveal grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                        <div class="md:order-2">
+                          <a href="https://x.com/aijo_narration" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden shadow-2xl"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="山里亮太の愛情ナレーション" src="https://images.weserv.nl/?url=prcdn.freetls.fastly.net/release_image/165653/13/165653-13-a527854926e90b827b42fc74cb08728b-1706x960.jpg&w=800"/></a>
+                        </div>
+                        <div class="md:order-1">
+                            <p class="text-sm font-semibold text-sky-400">Case 04: テレビ朝日</p>
+                            <h3 class="mt-1 text-2xl md:text-3xl font-extrabold text-white">『山里亮太の愛情ナレーション』</h3>
+                            <p class="mt-3 text-gray-400">ロケ初挑戦のタレントVTRに、山里亮太さんがナレーションと手書きメモでツッコミを入れる新感覚バラエティ。タレントの魅力を最大限に引き出す構成を設計。</p>
+                            <div class="mt-4 p-4 rounded-lg bg-gray-800 border border-white/5">
+                                <p class="text-sm font-bold text-white">結果</p>
+                                <p class="mt-1 text-2xl font-extrabold text-sky-400">バラバラマンスリー枠 平均視聴数 <span class="text-base font-bold text-white">歴代3位</span></p>
+                                <p class="text-xs text-gray-500">深夜帯で高いエンゲージメントを獲得</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Work 5: Wineeeeeeeers -->
+                    <article class="reveal grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                        <a href="https://x.com/Wineeeeeeeers_" target="_blank" rel="noopener" class="group block rounded-2xl overflow-hidden shadow-2xl"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Wineeeeeeeers" src="https://www.delight-company.com/wp-content/uploads/2025/01/Wineeeeeeeers_logo-1024x730.jpg"/></a>
+                        <div>
+                            <p class="text-sm font-semibold text-sky-400">Case 05: イベント企画</p>
+                            <h3 class="mt-1 text-2xl md:text-3xl font-extrabold text-white">新感覚イベント『Wineeeeeeeers！』</h3>
+                            <p class="mt-3 text-gray-400">人気の舞台俳優と若手芸人を掛け合わせ、新たなファン層を開拓するカジノ風イベントを企画・構成。異ジャンルの化学反応を最大化する仕掛けを作成。</p>
+                            <div class="mt-4 p-4 rounded-lg bg-gray-800 border border-white/5">
+                                <p class="text-sm font-bold text-white">結果</p>
+                                <p class="mt-1 text-2xl font-extrabold text-sky-400">過去3回開催 満足度99%<span class="text-base font-bold text-white">超</span></p>
+                                <p class="text-xs text-gray-500">2.5次元ファンとお笑いファンの新たな交流を創出</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24">
+            <div class="container mx-auto px-5">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Gallery</h2>
+                    <p class="mt-4 text-gray-400">その他、脚本・構成を担当した作品の一部です。</p>
+                </div>
+                <div class="reveal mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="https://youtube.com/playlist?list=PLzpYPY46wEzd9MjZ79mQtuiGR2jwqb-0t" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="この恋はフェイクですか" src="https://i.ytimg.com/vi/3QT3OY5mkEk/hqdefault.jpg"/></a>
+                    <a href="https://x.com/aijo_narration" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="山里亮太の愛情ナレーション" src="https://images.weserv.nl/?url=prcdn.freetls.fastly.net/release_image/165653/13/165653-13-a527854926e90b827b42fc74cb08728b-1706x960.jpg&w=600"/></a>
+                    <a href="https://tver.jp/series/srbypuowal" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="っぽいウタ" src="https://statics.tver.jp/images/content/thumbnail/series/large/srbypuowal.jpg?v=4"/></a>
+                    <a href="https://tver.jp/series/srfocpyzem" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="私が愛した地獄" src="https://statics.tver.jp/images/content/thumbnail/series/large/srfocpyzem.jpg?v=9"/></a>
+                    <a href="https://www.bs10.jp/program/sports/basketdamashi/" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="Bリーグ全力応援！バスケ魂" src="https://pbs.twimg.com/media/GnbTQX_aoAALezH?format=jpg&name=medium"/></a>
+                    <a href="https://x.com/Wineeeeeeeers_" target="_blank" rel="noopener" class="block rounded-lg overflow-hidden bg-gray-800 group"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="Wineeeeeeeers" src="https://www.delight-company.com/wp-content/uploads/2025/01/Wineeeeeeeers_logo-1024x730.jpg"/></a>
+                    <a href="#" class="youtube-thumbnail block rounded-lg overflow-hidden bg-gray-800 group" data-youtube-id="slrDZ3kSwGg"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="僕がキレイにしてあげる" src="https://i.ytimg.com/vi/slrDZ3kSwGg/hqdefault.jpg"/></a>
+                    <a href="#" class="youtube-thumbnail block rounded-lg overflow-hidden bg-gray-800 group" data-youtube-id="3thUGap9w8s"><img class="w-full h-full object-cover group-hover:opacity-80 transition" alt="焼肉キャバ嬢AKEMI" src="https://i.ytimg.com/vi/3thUGap9w8s/hqdefault.jpg"/></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="py-24 bg-gray-900 border-y border-white/5">
+             <div class="container mx-auto px-5">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">My Philosophy</h2>
+                    <p class="mt-4 text-gray-400">僕が企画を立てる上で大切にしている、3つの視点です。</p>
+                </div>
+                <div class="mt-16 max-w-3xl mx-auto space-y-8">
+                    <div class="reveal p-8 rounded-2xl border border-white/10 bg-gray-800/50 flex items-start gap-6">
+                        <i data-lucide="scan-face" class="w-10 h-10 text-sky-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">演者視点</h3>
+                            <p class="mt-2 text-sm text-gray-400">演者が最も輝く「見せ場」を作る。芸人経験を活かし、アドリブや化学反応が生まれる余白を設計します。</p>
+                        </div>
+                    </div>
+                     <div class="reveal p-8 rounded-2xl border border-white/10 bg-gray-800/50 flex items-start gap-6">
+                        <i data-lucide="line-chart" class="w-10 h-10 text-sky-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">制作者視点</h3>
+                            <p class="mt-2 text-sm text-gray-400">現場の熱量を、どうすれば視聴者に届けられるか。AD経験を活かし、実現可能な最高の演出を追求します。</p>
+                        </div>
+                    </div>
+                     <div class="reveal p-8 rounded-2xl border border-white/10 bg-gray-800/50 flex items-start gap-6">
+                        <i data-lucide="mouse-pointer-click" class="w-10 h-10 text-sky-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">視聴者視点</h3>
+                            <p class="mt-2 text-sm text-gray-400">なぜ、今これを見たいのか？SNSでの反応を予測し、シェアしたくなる「共感」と「驚き」を仕込みます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal mt-12 text-center max-w-3xl mx-auto p-6 rounded-2xl border-2 border-dashed border-sky-500/30 bg-sky-500/5">
+                    <h3 class="text-xl font-bold text-white">この三位一体の視点が、熱狂的な<span class="text-sky-400">ファンダム</span>を形成します。</h3>
+                </div>
+             </div>
+        </section>
+        
+        <!-- Credits Section -->
+        <section id="credits" class="py-24">
+            <div class="container mx-auto px-5">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">All Credits</h2>
+                    <p class="mt-4 text-gray-400">これまでの全実績です。カテゴリをクリックするとジャンプします。</p>
+                </div>
+                <!-- Category Jump Links -->
+                <div class="reveal mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+                    <a href="#credits-tv" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition"><i data-lucide="tv-2" class="w-8 h-8 text-sky-400"></i><span class="text-sm font-semibold">テレビ</span></a>
+                    <a href="#credits-drama" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition"><i data-lucide="clapperboard" class="w-8 h-8 text-sky-400"></i><span class="text-sm font-semibold">ドラマ</span></a>
+                    <a href="#credits-event" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition"><i data-lucide="users" class="w-8 h-8 text-sky-400"></i><span class="text-sm font-semibold">イベント</span></a>
+                    <a href="#credits-web" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition"><i data-lucide="cast" class="w-8 h-8 text-sky-400"></i><span class="text-sm font-semibold">Web配信</span></a>
+                    <a href="#credits-other" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition"><i data-lucide="video" class="w-8 h-8 text-sky-400"></i><span class="text-sm font-semibold">その他</span></a>
+                </div>
+
+                <div class="reveal mt-16 max-w-5xl mx-auto bg-gray-900 p-6 sm:p-8 rounded-lg border border-white/5 space-y-10">
+                    <div id="credits-tv">
+                        <h4 class="text-2xl font-bold text-sky-400 mb-4 border-b border-gray-700 pb-2">【テレビ】</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜NHK＞</strong><span class="sm:pl-4">ケータイ大喜利、ごごナマ、ニッポンに春が来た</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜テレビ朝日＞</strong><span class="sm:pl-4">雑学王、ハナタカ優越感、激レアさんを連れてきた、心がハタチになるころに、140×875、ファッションモンスター、私が愛した地獄、あなたの周りの妖怪ちゃん、私の神客紹介します、山里亮太の愛情ナレーション、ラブタイムトラベル など</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜テレビ東京＞</strong><span class="sm:pl-4">スポーツリアライブ、日曜ビックバラエティ、モーニングサテライト、あにむす など</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜フジテレビ＞</strong><span class="sm:pl-4">あいのりシリーズ、全力！脱力タイムズ！など</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜中京テレビ＞</strong><span class="sm:pl-4">っぽいウタ、っぽいネタ</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜広島ホームテレビ＞</strong><span class="sm:pl-4">鯉のはなシアター、カープ道</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜Abema＞</strong><span class="sm:pl-4">笑ラウドネス、こんな美人をフルなんて、RIZIN、3150FIGHT</span></li>
+                            <li class="flex flex-col sm:flex-row"><strong class="font-semibold text-gray-200 sm:w-40 flex-shrink-0">＜BS10＞</strong><span class="sm:pl-4">BEASTROAD、Bリーグ全力応援！バスケ魂 など多数</span></li>
+                        </ul>
+                    </div>
+                    <div id="credits-drama">
+                         <h4 class="text-2xl font-bold text-sky-400 mb-4 border-b border-gray-700 pb-2">【ドラマ・ボイスドラマ】</h4>
+                         <ul class="space-y-3 text-gray-400 list-disc list-inside text-sm">
+                             <li>テレビ朝日「あざとくて何が悪いの！？」あざとドラマ第10弾(全話)・第11弾(4~8話)脚本</li>
+                             <li>テレビ東京Youtube 「この恋はフェイクですか」脚本 /「焼肉キャバ嬢AKEMI」脚本 /「僕がキレイにしてあげる」全体構成、アニメ脚本</li>
+                         </ul>
+                    </div>
+                    <div id="credits-event">
+                        <h4 class="text-2xl font-bold text-sky-400 mb-4 border-b border-gray-700 pb-2">【イベント、舞台(演出も含む)】</h4>
+                        <ul class="space-y-3 text-gray-400 list-disc list-inside text-sm">
+                            <li>吉本興行制作ライブ（累計400本以上担当）</li>
+                            <li>KADOKAWA 主催イベント「ガチプリ学園」</li>
+                            <li>2.5次元×芸人カジノ風イベント Wineeeeeeeers</li>
+                            <li>2.5次元俳優、声優イベント(累計200本以上担当)</li>
+                            <li>東京五輪フェンシング表彰式ディレクター</li>
+                            <li>東京国際ブックフェア DNPブース など多数</li>
+                        </ul>
+                    </div>
+                     <div id="credits-web">
+                        <h4 class="text-2xl font-bold text-sky-400 mb-4 border-b border-gray-700 pb-2">【Web配信番組】</h4>
+                        <p class="text-xs text-gray-500 mb-3">※全体構成・フロアディレクター兼務</p>
+                        <ul class="space-y-3 text-gray-400 list-disc list-inside text-sm">
+                            <li>LINE LIVE（AKB48、L‘Arc-en-Ciel tetsuya、TGC LINELIVEステージなど）</li>
+                            <li>吉本興業 「シブオビ」 / テレビ東京「イケボライブ」 / グノシー「グノジャン」</li>
+                            <li>ゲーム「THE_IDOLM@STER_SideM」 配信番組 / ゲーム 一騎学園ニコ生配信番組 など多数</li>
+                        </ul>
+                    </div>
+                    <div id="credits-other">
+                        <h4 class="text-2xl font-bold text-sky-400 mb-4 border-b border-gray-700 pb-2">【その他映像コンテンツ】</h4>
+                        <ul class="space-y-3 text-gray-400 list-disc list-inside text-sm">
+                            <li>LDHTV 各種番組 / CR ZガンダムWeb CM / HINABINGO DVD / 企業VP など多数</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="container mx-auto px-5">
+                <div class="reveal max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">企画の“勝ち筋”を一緒に探しましょう</h2>
+                    <p class="mt-4 text-gray-400">漠然としたアイデアの壁打ち相手でも構いません。「どうすれば面白くなるか」「どうすれば数字に繋がるか」を一緒に整理します。まずはお気軽にご相談ください。</p>
+                    <div class="mt-8">
+                        <a href="mailto:japan_disco_time@icloud.com" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-sky-500 text-gray-950 font-semibold hover:bg-sky-400 transition text-lg">
+                           <i data-lucide="mail" class="w-5 h-5"></i>
+                           メールで相談する
+                        </a>
+                    </div>
+                    <div class="mt-6 flex justify-center space-x-6">
+                        <a href="https://x.com/sakurai_japan" target="_blank" rel="noopener" class="text-gray-500 hover:text-white"><i data-lucide="twitter" class="w-7 h-7"></i></a>
+                        <a href="https://www.instagram.com/kono_insta_bokuno?igsh=cjFzemFyNnM5bHRw&utm_source=qr" target="_blank" rel="noopener" class="text-gray-500 hover:text-white"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="py-8 border-t border-white/5 text-center text-sm text-gray-600">
+        <p>© 2025 Tomohiro Sakurai. All Rights Reserved.</p>
+    </footer>
+
+    <!-- YouTube Modal -->
+    <div id="youtubeModal" class="fixed inset-0 z-[999] hidden modal-overlay bg-black/80 flex items-center justify-center p-4 opacity-0">
+        <div class="modal-content relative max-w-4xl w-full aspect-video bg-black rounded-xl overflow-hidden border border-white/10 scale-95">
+            <div id="youtubePlayer" class="w-full h-full"></div>
+            <button id="youtubeCloseBtn" class="absolute -top-3 -right-3 size-9 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
+
+        // Intersection Observer for reveal animations
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu?.classList.add('hidden');
+                }
+            });
+        });
+
+        // --- YouTube Modal Logic ---
+        const youtubeModal = document.getElementById('youtubeModal');
+        const youtubeCloseBtn = document.getElementById('youtubeCloseBtn');
+        let youtubePlayer;
+
+        function loadYouTubeAPI(callback) {
+            if (window.YT && window.YT.Player) {
+                callback();
+                return;
+            }
+            const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            document.head.appendChild(tag);
+            window.onYouTubeIframeAPIReady = callback;
+        }
+
+        function openYoutubeModal(videoId) {
+            youtubeModal.classList.remove('hidden');
+            setTimeout(() => youtubeModal.classList.remove('opacity-0'), 10);
+            
+            loadYouTubeAPI(() => {
+                if (youtubePlayer) {
+                    youtubePlayer.loadVideoById(videoId);
+                } else {
+                    youtubePlayer = new YT.Player('youtubePlayer', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: { 'autoplay': 1, 'rel': 0 },
+                    });
+                }
+            });
+        }
+
+        function closeYoutubeModal() {
+            try { youtubePlayer?.stopVideo?.(); } catch(e) {}
+            youtubeModal.classList.add('opacity-0');
+            setTimeout(() => youtubeModal.classList.add('hidden'), 250);
+        }
+
+        document.querySelectorAll('.youtube-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', (e) => {
+                e.preventDefault();
+                const videoId = thumb.dataset.youtubeId;
+                if(videoId) openYoutubeModal(videoId);
+            });
+        });
+        
+        youtubeCloseBtn?.addEventListener('click', closeYoutubeModal);
+        youtubeModal?.addEventListener('click', (e) => {
+            if (e.target === youtubeModal) closeYoutubeModal();
+        });
+
+        // Self-healing images script
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img').forEach(img => {
+                const originalSrc = img.src;
+                if (!img.hasAttribute('referrerpolicy')) {
+                    img.setAttribute('referrerpolicy', 'no-referrer');
+                }
+                img.addEventListener('error', function() {
+                    if (this.dataset.fallbackTried) return;
+                    this.dataset.fallbackTried = 'true';
+                    const proxiedSrc = `https://images.weserv.nl/?url=${encodeURIComponent(originalSrc)}`;
+                    this.src = proxiedSrc;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
